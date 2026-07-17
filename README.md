@@ -143,7 +143,29 @@ Este proyecto ha sido desarrollado con fines académicos y de aprendizaje.
 **Pantalla Principal**
 ![Pantalla Principal](https://github.com/AlfMosquera/BiblioJava/blob/main/BiblioJava/Principal/src/main/java/com/tarea/libro/image/Pantalla%20Principal.png)
 
-
 **Pantalla Ingreso Base H2**
 ![Pantalla Ingreso Base H2](https://github.com/AlfMosquera/BiblioJava/blob/main/BiblioJava/Principal/src/main/java/com/tarea/libro/image/Pantalla%20Ingreso%20H2.png)
 
+**Pantalla Principal H2**
+![Pantalla Principal H](https://github.com/AlfMosquera/BiblioJava/blob/main/BiblioJava/Principal/src/main/java/com/tarea/libro/image/Pantalla%20Principal%20H2.png)
+
+**Pantalla Ingreso Ficha**
+![Pantalla Ingreso Ficha](https://github.com/AlfMosquera/BiblioJava/blob/main/BiblioJava/Principal/src/main/java/com/tarea/libro/image/Pantalla%20Ingreso%20Ficha.png)
+
+**Pantalla Principal Datos Cargada**
+![Pantalla Principal Datos Cargada](https://github.com/AlfMosquera/BiblioJava/blob/main/BiblioJava/Principal/src/main/java/com/tarea/libro/image/Pantalla%20Principal%20(Datos%20Cargados).png)
+
+**Pantalla Buscar Ficha**
+![Pantalla Buscar Ficha](https://github.com/AlfMosquera/BiblioJava/blob/main/BiblioJava/Principal/src/main/java/com/tarea/libro/image/Pantalla%20Busqueda%20Ficha.png)
+
+**Pantalla Actualizar Ficha**
+![Pantalla Actualizar Ficha](https://github.com/AlfMosquera/BiblioJava/blob/main/BiblioJava/Principal/src/main/java/com/tarea/libro/image/Pantalla%20Actualizar%20Ficha.png)
+
+**Pantalla Eliminar Ficha**
+![Pantalla Eliminar Ficha](https://github.com/AlfMosquera/BiblioJava/blob/main/BiblioJava/Principal/src/main/java/com/tarea/libro/image/Pantalla%20Eliminar%20Ficha.png)
+
+**Pantalla Principal Post-Pruebas**
+![Pantalla Principal Post-Pruebas](https://github.com/AlfMosquera/BiblioJava/blob/main/BiblioJava/Principal/src/main/java/com/tarea/libro/image/Pantalla%20Principal%20(Post%20eliminar%20ficha).png)
+
+**Pantalla H2 Post-Pruebas**
+![Pantalla H2 Post-Pruebas](https://github.com/AlfMosquera/BiblioJava/blob/main/BiblioJava/Principal/src/main/java/com/tarea/libro/image/Pantalla%20H2%20Post%20Pruebas.png)
