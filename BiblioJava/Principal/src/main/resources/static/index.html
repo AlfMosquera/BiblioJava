@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fichero de Libros</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3" />
+</head>
+<body>
+
+  <div class="drawer-shell">
+
+    <header class="titlepage">
+      <div class="titlepage__main">
+        <span class="titlepage__eyebrow">Ex&nbsp;Libris &middot; registro personal</span>
+        <h1 class="titlepage__title">Catálogo de&nbsp;Libros</h1>
+        <div class="titlepage__rule" aria-hidden="true"></div>
+      </div>
+      <div class="titlepage__status" id="connStatus">
+        <span class="dot" id="connDot"></span>
+        <span id="connText">Comprobando conexión…</span>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <label class="search">
+        <svg viewBox="0 0 20 20" class="search__icon" aria-hidden="true"><path d="M13.5 12.4 17 15.9 15.9 17l-3.5-3.5a6 6 0 1 1 1.1-1.1ZM8.5 13a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z"/></svg>
+        <input type="text" id="searchInput" placeholder="Buscar por título, autor o editorial…" autocomplete="off" />
+      </label>
+      <button class="btn btn--brass" id="openNewCard">
+        <span class="btn__plus">+</span> Nueva ficha
+      </button>
+    </section>
+
+    <main>
+      <p class="hint" id="countHint"></p>
+
+      <div class="drawer" id="cardsGrid" aria-live="polite"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <div class="empty-state__stamp">Sin registros</div>
+        <p>El fichero está vacío. Añade la primera ficha para comenzar el catálogo.</p>
+        <button class="btn btn--ghost" id="emptyStateAdd">+ Nueva ficha</button>
+      </div>
+
+      <div class="load-state" id="loadState">
+        <div class="load-state__mark" aria-hidden="true"></div>
+        <p>Abriendo el cajón del fichero…</p>
+      </div>
+
+      <div class="error-state" id="errorState" hidden>
+        <p><strong>No se pudo contactar con el fichero.</strong></p>
+        <p id="errorDetail">Verifica que el servidor esté encendido en el puerto 5070.</p>
+        <button class="btn btn--ghost" id="retryBtn">Reintentar</button>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <span>BiblioJava &middot; API en <code>/libros</code></span>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <form class="index-card index-card--modal" id="cardForm">
+      <div class="index-card__hole"></div>
+      <div class="index-card__tab" id="formTab">N.° nueva</div>
+
+      <h2 class="index-card__heading" id="formHeading">Nueva ficha</h2>
+
+      <label class="field">
+        <span>Título</span>
+        <input type="text" id="fieldTitulo" required maxlength="200" placeholder="Cien años de soledad" />
+      </label>
+
+      <label class="field">
+        <span>Autor</span>
+        <input type="text" id="fieldAutor" required maxlength="150" placeholder="Gabriel García Márquez" />
+      </label>
+
+      <div class="field-row">
+        <label class="field">
+          <span>Editorial</span>
+          <input type="text" id="fieldEditorial" required maxlength="150" placeholder="Sudamericana" />
+        </label>
+        <label class="field field--year">
+          <span>Año</span>
+          <input type="number" id="fieldAnio" required min="0" max="2100" placeholder="1967" />
+        </label>
+      </div>
+
+      <p class="field-error" id="formError" hidden></p>
+
+      <div class="index-card__actions">
+        <button type="button" class="btn btn--ghost" id="cancelForm">Cancelar</button>
+        <button type="submit" class="btn btn--stamp" id="submitForm">Sellar ficha</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal-backdrop" id="confirmBackdrop" hidden>
+    <div class="confirm-box">
+      <p class="confirm-box__title">¿Retirar esta ficha del catálogo?</p>
+      <p class="confirm-box__subtitle" id="confirmSubtitle"></p>
+      <div class="confirm-box__actions">
+        <button type="button" id="confirmCancel" class="btn btn--ghost" style="margin-right: 10px;">Cancelar</button>
+        <button class="btn btn--danger" id="confirmDelete">Retirar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+
+<script src="js/app.js?v=2"></script>
+</body>
+</html>
