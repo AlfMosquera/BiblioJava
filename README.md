@@ -1,27 +1,143 @@
-# TareaLibro
-Web API de Libro
-En este repositorio se encuentra un proyecto, inicializado mediante la tecnogolia "Spring Initializer"
-Con una clase "Libro" con los campos "Id","titulo","autor","editorial" y "anioPublicacion"
+# 📚 BiblioJava
+Sistema de gestión de catálogo bibliográfico desarrollado como una aplicación web moderna y dinámica. Permite administrar registros de libros mediante operaciones **CRUD** (Crear, Leer, Actualizar y Eliminar), ofreciendo una interfaz inspirada en los tradicionales ficheros de biblioteca, combinada con tecnologías modernas de desarrollo web.
 
-# Estructura
-- Models: Donde se almacena nuestra clase creada 'Libro.'
-- Repository: Donde se almacena de manera estatica la información que sera usada para la ejecución del proyecto.
-- Services: Donde se almacenan los servicios que se ejecutaran en el proyecto.
-- Controllers: Donde se almacenan los controlador con los que pondremos en acción nuestros servicios.
+---
+## 🚀 Tecnologías utilizadas
+| Tecnología | Descripción |
+|------------|-------------|
+| ☕ Java 17 | Lenguaje principal del backend |
+| 🌱 Spring Boot | Framework para el desarrollo de la API |
+| 🗄️ H2 Database | Base de datos en memoria para desarrollo |
+| 🎨 HTML5 | Estructura de la interfaz |
+| 🎨 CSS3 | Diseño moderno y responsive |
+| ⚡ JavaScript | Interactividad del frontend |
+| 📦 Maven | Gestión de dependencias y compilación |
 
-# Funcionamiento:
-Tiene tres funcionalidades principales:
+---
 
- - Consultar la lista de libros: Mediante una solicitud Get, nos muestra los libros almacenados en nuestro repositorio.
- - Buscar un libro: A través de una búsqueda Get de id, se solicita un libro en especifico.
- - Agregar libro: Por medio de una solicitud Post, se agrega (aunque de manera temporal al no contar con una base de datos) un nuevo libro con todas sus caracteristicas pertinentes.
+## ✨ Características
+- 📖 Gestión completa de libros mediante operaciones **CRUD**.
+- 🔍 Búsqueda y filtrado en tiempo real por:
+  - Título
+  - Autor
+  - Editorial
+  - Año de publicación
+- 📱 Diseño responsive adaptable a dispositivos móviles y escritorio.
+- 🌐 Indicador de estado de conexión con el servidor.
+- ⚡ Actualización dinámica de la interfaz.
+
+---
+
+## 📁 Estructura del proyecto
+```
+BiblioJava/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   ├── resources/
+│   │   │   ├── static/
+│   │   │   └── application.properties
+│   │   └── ...
+│   ├── test/
+│
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── README.md
+```
+
+---
+
+## 📋 Requisitos
+Antes de ejecutar el proyecto asegúrate de tener instalado:
+- ☕ Java Development Kit (JDK) 17 o superior
+- 📦 Maven (opcional, ya que el proyecto incluye Maven Wrapper)
+- 💻 Terminal o consola de comandos
+
+---
+## ⚙️ Instalación
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/usuario/BiblioJava.git
+```
+### 2. Ingresar al proyecto
+```bash
+cd BiblioJava/Principal
+```
+---
+## ▶️ Ejecutar la aplicación
+
+### Windows
+```bash
+.\mvnw.cmd clean spring-boot:run
+```
+
+### Linux / macOS
+```bash
+./mvnw clean spring-boot:run
+```
+
+---
+## 🌐 Acceder a la aplicación
+Una vez iniciado el servidor, abre tu navegador en:
+```
+http://localhost:5070
+```
+---
+## 🗄️ Consola H2
+Puedes acceder a la base de datos desde:
+```
+http://localhost:5070/h2-console
+```
+### Credenciales
+
+| Parámetro | Valor |
+|-----------|-------|
+| JDBC URL | jdbc:h2:mem:librosdb |
+| Usuario | sa |
+| Contraseña | *(vacía)* |
+
+---
+
+## 💡 Notas
+
+- Si realizas cambios en los archivos ubicados en:
+
+```
+src/main/resources/static/
+```
+
+recuerda actualizar la caché del navegador con:
+
+```
+Ctrl + F5
+```
+
+para visualizar correctamente las modificaciones.
+
+---
+
+## 📸 Funcionalidades
+- 📚 Registro de libros
+- ✏️ Edición de registros
+- 🗑️ Eliminación de libros
+- 🔍 Búsqueda instantánea
+- 📱 Interfaz adaptable
+- ⚡ Comunicación en tiempo real con el backend
+
+---
+
+## 👨‍💻 Autor
+**Omar Mosquera Soria**
+
+Estudiante de Ingeniería en Sistemas  
+Universidad de Guayaquil
+
+---
+
+## 📄 Licencia
+Este proyecto ha sido desarrollado con fines académicos y de aprendizaje.
 
 # Ejecución 
- - Consulta general:
- - [![Prueba-Post-Man-Get-Libros.jpg](https://i.postimg.cc/rsxGtGBH/Prueba-Post-Man-Get-Libros.jpg)](https://postimg.cc/CnMn38LC)
- - Consulta Por Id:
- - [![Prueba-Post-Man-Get-Libro-Id.jpg](https://i.postimg.cc/k5GxydrK/Prueba-Post-Man-Get-Libro-Id.jpg)](https://postimg.cc/HJGcpRkk)
- - Libro Agregado: 
- - [![Prueba-Post-Man-Post-Libro.jpg](https://i.postimg.cc/fbPY2gZF/Prueba-Post-Man-Post-Libro.jpg)](https://postimg.cc/t1h17kst)
- - Consulta general con el libro agregado:
- - [![Prueba-Post-Man-Get-Libros-2.jpg](https://i.postimg.cc/VNZFyk9K/Prueba-Post-Man-Get-Libros-2.jpg)](https://postimg.cc/2qvWhmKW)
+
