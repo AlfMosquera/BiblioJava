@@ -140,4 +140,4 @@ Universidad de Guayaquil
 Este proyecto ha sido desarrollado con fines académicos y de aprendizaje.
 
 # Ejecución 
-![Pantalla Principal](BiblioJava/blob/main/BiblioJava/Principal/src/main/java/com/tarea/libro/image/Pantalla%20Principal.png)
+![Pantalla Principal](https://github.com/AlfMosquera/BiblioJava/blob/main/BiblioJava/Principal/src/main/java/com/tarea/libro/image/Pantalla%20Principal.png)
